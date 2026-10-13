@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimization Meta Tags -->
+    <title>Vinocent Global Resources | Enterprise Trade, Logistics & Industrial Consulting</title>
+    <meta name="description" content="Vinocent Global Resources provides end-to-end global trade solutions, technical consulting, supply chain management, and high-capacity equipment logistics worldwide.">
+    <meta name="keywords" content="Vinocent Global Resources, Global Trade, Supply Chain Solutions, Technical Consulting, Equipment Logistics, Enterprise Solutions">
+    <meta name="author" content="Vinocent Global Resources">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0b132b',
+                            900: '#070d1e',
+                            950: '#030712',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(11, 19, 43, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #070d1e; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- Sticky Glassmorphism Header Nav -->
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-slate-800 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl gold-gradient-bg flex items-center justify-center font-bold text-navy-950 text-xl shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform">
+                        V
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-white block">VINOCENT</span>
+                        <span class="text-[10px] tracking-widest text-gold-500 font-semibold uppercase block -mt-1">Global Resources</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">About Us</a>
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Services</a>
+                    <a href="#why-us" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Why Choose Us</a>
+                    <a href="#team" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Team</a>
+                    <a href="#testimonials" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Case Studies</a>
+                    <a href="#github-deploy" class="text-sm font-medium text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> Deploy Guide
+                    </a>
+                </nav>
+
+                <!-- Right Action Buttons -->
+                <div class="hidden md:flex items-center gap-4">
+                    <button onclick="toggleModal('consultationModal')" class="gold-gradient-bg text-navy-950 font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center gap-2">
+                        <span>Get Started</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-200 hover:text-gold-400">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-200 hover:text-gold-400">About Us</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-200 hover:text-gold-400">Services</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-200 hover:text-gold-400">Why Choose Us</a>
+            <a href="#team" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-200 hover:text-gold-400">Team</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-200 hover:text-gold-400">Case Studies</a>
+            <a href="#github-deploy" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-gold-400 hover:text-gold-300">
+                <i class="fa-brands fa-github mr-2"></i> GitHub Deployment Guide
+            </a>
+            <button onclick="toggleMobileMenu(); toggleModal('consultationModal');" class="w-full mt-2 gold-gradient-bg text-navy-950 font-semibold py-3 rounded-lg text-center">
+                Get Started
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950">
+        <!-- Background Glowing Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto space-y-6">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                    Global Industrial & Supply Chain Excellence
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none">
+                    Powering Sustainable Growth Through <span class="text-gradient">Global Innovation</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg sm:text-xl text-slate-300 font-normal max-w-2xl mx-auto leading-relaxed">
+                    Vinocent Global Resources integrates enterprise-grade logistics, energy solutions, and high-impact technical consulting to scale businesses seamlessly across international borders.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <button onclick="toggleModal('consultationModal')" class="w-full sm:w-auto gold-gradient-bg text-navy-950 font-bold px-8 py-4 rounded-xl text-base shadow-xl shadow-gold-500/20 hover:scale-105 transition-all">
+                        Request Strategy Session
+                    </button>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold text-slate-200 border border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 transition-all text-center">
+                        Explore Our Services
+                    </a>
+                </div>
+
+                <!-- Key Stats Counter Bar -->
+                <div class="pt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-slate-800/80 mt-12">
+                    <div class="p-4 rounded-2xl glass-card">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-gold-400" id="stat1">250+</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Global Projects</div>
+                    </div>
+                    <div class="p-4 rounded-2xl glass-card">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-white" id="stat2">99.4%</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Client Satisfaction</div>
+                    </div>
+                    <div class="p-4 rounded-2xl glass-card">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-gold-400" id="stat3">18+</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Years Excellence</div>
+                    </div>
+                    <div class="p-4 rounded-2xl glass-card">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-white" id="stat4">42</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Countries Reached</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-navy-900 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Visual Graphic -->
+                <div class="relative">
+                    <div class="aspect-video sm:aspect-square rounded-3xl overflow-hidden glass-card p-6 relative flex flex-col justify-between border-slate-700/50">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-transparent to-blue-500/10 pointer-events-none"></div>
+                        
+                        <div class="flex justify-between items-center z-10">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Enterprise Framework</span>
+                            <i class="fa-solid fa-earth-americas text-2xl text-slate-400"></i>
+                        </div>
+
+                        <!-- Card graphic content mockup -->
+                        <div class="space-y-4 my-8 z-10">
+                            <div class="p-4 rounded-xl bg-navy-950/80 border border-slate-800 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">ISO 9001 & Compliance Certified</h4>
+                                    <p class="text-xs text-slate-400">Standardized global operations & risk governance.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-950/80 border border-slate-800 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-chart-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Agile Supply Integration</h4>
+                                    <p class="text-xs text-slate-400">Real-time telemetric monitoring and distribution.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="z-10 pt-4 border-t border-slate-800 text-xs text-slate-400 flex justify-between items-center">
+                            <span>Vinocent Corporate Overview</span>
+                            <span class="text-gold-400 font-semibold">Established Trust</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content & Interactive Tabs -->
+                <div class="space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold tracking-widest text-gold-500 uppercase">About Vinocent Global Resources</h2>
+                        <p class="text-3xl sm:text-4xl font-bold text-white mt-2">Empowering Global Enterprises Through Strategic Solutions</p>
+                    </div>
+
+                    <p class="text-slate-300 leading-relaxed">
+                        Vinocent Global Resources is a multi-disciplinary conglomerate specializing in supply chain management, high-tech industrial sourcing, energy development, and cross-border trade facilitation. We bridge market gaps across continents through resilient networks and technological innovation.
+                    </p>
+
+                    <!-- Interactive Mission/Vision/Values Tabs -->
+                    <div class="pt-2">
+                        <div class="flex border-b border-slate-800 gap-6">
+                            <button onclick="switchTab('mission')" id="tab-mission" class="tab-btn active border-b-2 border-gold-500 text-gold-400 font-semibold pb-3 text-sm transition-all">
+                                Our Mission
+                            </button>
+                            <button onclick="switchTab('vision')" id="tab-vision" class="tab-btn border-b-2 border-transparent text-slate-400 hover:text-white font-semibold pb-3 text-sm transition-all">
+                                Our Vision
+                            </button>
+                            <button onclick="switchTab('values')" id="tab-values" class="tab-btn border-b-2 border-transparent text-slate-400 hover:text-white font-semibold pb-3 text-sm transition-all">
+                                Core Values
+                            </button>
+                        </div>
+
+                        <div class="py-4 min-h-[100px]" id="tab-content">
+                            <!-- Populated dynamically via JavaScript -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold tracking-widest text-gold-500 uppercase">Our Key Offerings</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-white">Tailored Solutions for Complex Challenges</p>
+                <p class="text-slate-400 text-sm sm:text-base">Discover how Vinocent Global Resources accelerates efficiency and drives sustainable ROI across major industries.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/10 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Supply Chain & Freight Management</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            End-to-end multimodal transport solutions, automated warehousing, and custom clearances tailored for international trade corridors.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('supply-chain')" class="inline-flex items-center text-gold-400 hover:text-gold-300 font-semibold text-sm gap-2">
+                        <span>Learn Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/10 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Technical & Industrial Consulting</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Expert advisory for industrial automation, process optimization, structural integrity assessments, and technology integration.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('tech-consulting')" class="inline-flex items-center text-gold-400 hover:text-gold-300 font-semibold text-sm gap-2">
+                        <span>Learn Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/10 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Global Commodities & Trade Solutions</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Facilitating international trade transactions, raw materials sourcing, compliance management, and strategic market entry.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('trade-solutions')" class="inline-flex items-center text-gold-400 hover:text-gold-300 font-semibold text-sm gap-2">
+                        <span>Learn Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/10 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Renewable Energy Infrastructure</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Turnkey solar, wind, and sustainable power infrastructure procurement, installation, and project lifecycle management.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('energy')" class="inline-flex items-center text-gold-400 hover:text-gold-300 font-semibold text-sm gap-2">
+                        <span>Learn Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/10 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Heavy Machinery & Procurement</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Direct procurement of heavy construction equipment, specialized machinery, and industrial replacement components.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('machinery')" class="inline-flex items-center text-gold-400 hover:text-gold-300 font-semibold text-sm gap-2">
+                        <span>Learn Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/10 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Government & Public Sector Contracting</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Public sector procurement support, infrastructure project execution, and regulatory compliance advisory.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('public-sector')" class="inline-flex items-center text-gold-400 hover:text-gold-300 font-semibold text-sm gap-2">
+                        <span>Learn Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-24 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="text-xs font-bold tracking-widest text-gold-500 uppercase">Competitive Advantages</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">Why Industry Leaders Trust Vinocent</h3>
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Our relentless commitment to operational rigor, dynamic technology adoption, and absolute transparency makes us the preferred partner for complex, large-scale global initiatives.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-4 rounded-xl bg-navy-950/60 border border-slate-800/80">
+                            <div class="text-gold-400 text-xl font-bold shrink-0 mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Unmatched Global Partner Network</h4>
+                                <p class="text-xs text-slate-400 mt-1">Established physical operations and strategic logistics hubs across North America, Europe, Asia, and Africa.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-4 rounded-xl bg-navy-950/60 border border-slate-800/80">
+                            <div class="text-gold-400 text-xl font-bold shrink-0 mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">End-to-End Compliance & Security</h4>
+                                <p class="text-xs text-slate-400 mt-1">Strict adherence to international trade regulations, maritime laws, and ethical labor standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-4 rounded-xl bg-navy-950/60 border border-slate-800/80">
+                            <div class="text-gold-400 text-xl font-bold shrink-0 mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Data-Driven Execution</h4>
+                                <p class="text-xs text-slate-400 mt-1">Advanced telemetry, dynamic routing, and risk management analytics for guaranteed execution accuracy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Graphic Showcase -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="p-6 rounded-2xl glass-card bg-gradient-to-b from-navy-800 to-navy-950 border-slate-800">
+                            <i class="fa-solid fa-bolt text-3xl text-gold-400 mb-3"></i>
+                            <div class="text-2xl font-bold text-white">24/7</div>
+                            <div class="text-xs text-slate-400 mt-1">Operational Support</div>
+                        </div>
+                        <div class="p-6 rounded-2xl glass-card bg-gradient-to-b from-navy-800 to-navy-950 border-slate-800">
+                            <i class="fa-solid fa-shield text-3xl text-gold-400 mb-3"></i>
+                            <div class="text-2xl font-bold text-white">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Risk Mitigation Protocol</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="p-6 rounded-2xl glass-card bg-gradient-to-b from-navy-800 to-navy-950 border-slate-800">
+                            <i class="fa-solid fa-award text-3xl text-gold-400 mb-3"></i>
+                            <div class="text-2xl font-bold text-white">Top 1%</div>
+                            <div class="text-xs text-slate-400 mt-1">Industry Reliability Index</div>
+                        </div>
+                        <div class="p-6 rounded-2xl glass-card bg-gradient-to-b from-navy-800 to-navy-950 border-slate-800">
+                            <i class="fa-solid fa-seedling text-3xl text-gold-400 mb-3"></i>
+                            <div class="text-2xl font-bold text-white">Zero</div>
+                            <div class="text-xs text-slate-400 mt-1">Carbon Offsetting Targets</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section id="team" class="py-24 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold tracking-widest text-gold-500 uppercase">Executive Leadership</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-white">Guided by Visionary Industry Pioneers</p>
+                <p class="text-slate-400 text-sm sm:text-base">Meet the executive team driving international trade and innovation forward.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="h-64 bg-navy-900 relative flex items-center justify-center overflow-hidden">
+                        <!-- Stylish Avatar Icon Placeholder -->
+                        <div class="w-28 h-28 rounded-full gold-gradient-bg text-navy-950 flex items-center justify-center font-bold text-4xl shadow-xl">
+                            VC
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Vincent C.</h3>
+                        <p class="text-gold-400 text-xs font-semibold uppercase tracking-wider mt-1">Founder & Managing Director</p>
+                        <p class="text-slate-400 text-sm mt-3">20+ years expertise in international logistics, commodities, and corporate strategy.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-800 flex gap-3">
+                            <a href="#" class="w-8 h-8 rounded-lg bg-navy-900 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-lg bg-navy-900 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="h-64 bg-navy-900 relative flex items-center justify-center overflow-hidden">
+                        <div class="w-28 h-28 rounded-full bg-slate-800 text-gold-400 border border-gold-500/30 flex items-center justify-center font-bold text-4xl shadow-xl">
+                            EA
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Eleanor Vance</h3>
+                        <p class="text-gold-400 text-xs font-semibold uppercase tracking-wider mt-1">Chief Operations Officer</p>
+                        <p class="text-slate-400 text-sm mt-3">Specializes in cross-border supply chain integration and infrastructure scaling.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-800 flex gap-3">
+                            <a href="#" class="w-8 h-8 rounded-lg bg-navy-900 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-lg bg-navy-900 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group border border-slate-800">
+                    <div class="h-64 bg-navy-900 relative flex items-center justify-center overflow-hidden">
+                        <div class="w-28 h-28 rounded-full bg-slate-800 text-gold-400 border border-gold-500/30 flex items-center justify-center font-bold text-4xl shadow-xl">
+                            MR
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Marcus Rothschild</h3>
+                        <p class="text-gold-400 text-xs font-semibold uppercase tracking-wider mt-1">Head of Global Consulting</p>
+                        <p class="text-slate-400 text-sm mt-3">Ex-Tier 1 strategy consultant advising public & private sector energy projects.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-800 flex gap-3">
+                            <a href="#" class="w-8 h-8 rounded-lg bg-navy-900 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-lg bg-navy-900 text-slate-300 hover:text-gold-400 flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold tracking-widest text-gold-500 uppercase">Proven Client Impact</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-white">Case Studies & Endorsements</p>
+                <p class="text-slate-400 text-sm sm:text-base">Read how Vinocent Global Resources solves major industrial hurdles worldwide.</p>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic mb-6">
+                            "Vinocent Global Resources completely overhauled our sub-Saharan supply route logistics. Delivery bottlenecks dropped by 38% in the first quarter alone."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold">AK</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Alexander K.</h4>
+                            <p class="text-xs text-slate-400">VP Supply Chain, Apex Energy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic mb-6">
+                            "Their industrial equipment procurement speed saved our infrastructure project from major penalty delays. Professionalism at the highest level."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">SB</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Sarah B.</h4>
+                            <p class="text-xs text-slate-400">Project Director, Nexus Infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic mb-6">
+                            "Finding a trade partner that navigates international compliance flawlessly is rare. Vinocent is truly an enterprise-class resource."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">DM</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">David M.</h4>
+                            <p class="text-xs text-slate-400">Chief Operating Officer, Pan-Global Trade</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Deployment Guide Section -->
+    <section id="github-deploy" class="py-24 bg-navy-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 text-xs font-semibold uppercase tracking-wider border border-gold-500/20">
+                    <i class="fa-brands fa-github"></i> Developer & Admin Utility
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">GitHub Repository & Deployment Guide</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Follow these exact instructions to host this website live using GitHub Pages for free.</p>
+            </div>
+
+            <!-- Deployment Workflow Steps -->
+            <div class="grid lg:grid-cols-3 gap-6 mb-12">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-2xl glass-card relative border-l-4 border-gold-500">
+                    <div class="text-xs font-bold text-gold-400 uppercase tracking-widest mb-1">Step 01</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Create GitHub Repository</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Log into <a href="https://github.com" target="_blank" class="text-gold-400 underline">GitHub.com</a>, click <strong>"New Repository"</strong>, name it <code class="bg-navy-900 px-1 py-0.5 rounded text-gold-300">vinocent-global-resources</code>, set it to Public, and click <strong>Create</strong>.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 rounded-2xl glass-card relative border-l-4 border-blue-500">
+                    <div class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-1">Step 02</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Save HTML File</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Save all this web code into a file named <code class="bg-navy-900 px-1 py-0.5 rounded text-blue-300">index.html</code> inside your local project folder.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 rounded-2xl glass-card relative border-l-4 border-emerald-500">
+                    <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-1">Step 03</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Enable GitHub Pages</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        In your repo settings, navigate to <strong>Pages</strong>, select branch <code class="bg-navy-900 px-1 py-0.5 rounded text-emerald-300">main</code> (or <code class="bg-navy-900 px-1 py-0.5 rounded text-emerald-300">master</code>), and click <strong>Save</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Terminal Commands Terminal Box -->
+            <div class="rounded-2xl bg-navy-900 border border-slate-800 overflow-hidden max-w-4xl mx-auto shadow-2xl">
+                <div class="bg-navy-950 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-400 ml-2">Terminal / Git Bash Commands</span>
+                    </div>
+                    <button onclick="copyTerminalCommands()" class="text-xs text-gold-400 hover:text-gold-300 flex items-center gap-1">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="copyTerminalBtnText">Copy Terminal Script</span>
+                    </button>
+                </div>
+                <div class="p-6 font-mono text-xs sm:text-sm text-slate-300 space-y-3 overflow-x-auto">
+                    <p class="text-slate-500"># 1. Initialize local repository</p>
+                    <p class="text-emerald-400">git init</p>
+                    
+                    <p class="text-slate-500 pt-2"># 2. Add files and make initial commit</p>
+                    <p class="text-emerald-400">git add index.html</p>
+                    <p class="text-emerald-400">git commit -m "Initial commit: Vinocent Global Resources website"</p>
+
+                    <p class="text-slate-500 pt-2"># 3. Rename default branch to main</p>
+                    <p class="text-emerald-400">git branch -M main</p>
+
+                    <p class="text-slate-500 pt-2"># 4. Link your GitHub remote URL (replace YOUR_USERNAME)</p>
+                    <p class="text-gold-400">git remote add origin https://github.com/YOUR_USERNAME/vinocent-global-resources.git</p>
+
+                    <p class="text-slate-500 pt-2"># 5. Push code live!</p>
+                    <p class="text-emerald-400">git push -u origin main</p>
+                </div>
+                <div class="bg-navy-950/60 px-6 py-3 border-t border-slate-800/80 text-xs text-slate-400 flex items-center justify-between">
+                    <span>Live URL Pattern:</span>
+                    <code class="text-gold-400">https://&lt;username&gt;.github.io/vinocent-global-resources/</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Info & Map Card -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-xs font-bold tracking-widest text-gold-500 uppercase">Connect With Us</h2>
+                        <h3 class="text-3xl sm:text-4xl font-bold text-white mt-2">Start Your Enterprise Engagement</h3>
+                        <p class="text-slate-300 text-sm mt-3">Our international team responds within 24 hours to all business inquiries.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center shrink-0 font-bold text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Global Headquarters</h4>
+                                <p class="text-slate-400 text-sm mt-0.5">Vinocent Corporate Tower, Financial District</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center shrink-0 font-bold text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Direct Email</h4>
+                                <p class="text-slate-400 text-sm mt-0.5">contact@vinocentglobal.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center shrink-0 font-bold text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Corporate Inquiries</h4>
+                                <p class="text-slate-400 text-sm mt-0.5">+1 (800) 482-8466 / +234 (800) VINOCENT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map Placeholder -->
+                    <div class="rounded-2xl glass-card h-48 relative overflow-hidden flex items-center justify-center border border-slate-800">
+                        <div class="absolute inset-0 bg-navy-950 opacity-60"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-earth-africa text-4xl text-gold-400"></i>
+                            <p class="text-xs text-slate-300 font-semibold uppercase tracking-wider">Interactive Global Hub Map</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white">Send Proposal Request</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">First Name *</label>
+                                <input type="text" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Last Name *</label>
+                                <input type="text" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Business Email *</label>
+                            <input type="email" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="john@company.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Service Line Interest</label>
+                            <select class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                <option value="supply-chain">Supply Chain & Logistics</option>
+                                <option value="consulting">Technical Advisory</option>
+                                <option value="trade">Commodities & Global Trade</option>
+                                <option value="energy">Renewable Energy Solutions</option>
+                                <option value="machinery">Machinery Procurement</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Project Details *</label>
+                            <textarea rows="4" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="Describe scope, timeline, and requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full gold-gradient-bg text-navy-950 font-bold py-4 rounded-xl shadow-lg hover:brightness-110 active:scale-98 transition-all">
+                            Submit Request
+                        </button>
+                    </form>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="formSuccess" class="hidden text-center py-12 space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Proposal Request Received</h4>
+                        <p class="text-slate-300 text-sm max-w-md mx-auto">Thank you for reaching out. A Vinocent global advisor has been assigned to your inquiry and will contact you shortly.</p>
+                        <button onclick="resetContactForm()" class="px-6 py-2 bg-navy-900 border border-slate-700 text-slate-300 text-xs font-semibold rounded-lg hover:text-white">
+                            Send Another Inquiry
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-slate-800/80 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg gold-gradient-bg flex items-center justify-center font-bold text-navy-950 text-lg">
+                            V
+                        </div>
+                        <span class="text-lg font-extrabold tracking-tight text-white">VINOCENT GLOBAL</span>
+                    </a>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+                        Enterprise global resource provider specializing in end-to-end logistics, strategic procurement, sustainable energy, and industrial advisory.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-navy-900 text-slate-400 hover:text-gold-400 flex items-center justify-center border border-slate-800 transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-navy-900 text-slate-400 hover:text-gold-400 flex items-center justify-center border border-slate-800 transition-colors">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-navy-900 text-slate-400 hover:text-gold-400 flex items-center justify-center border border-slate-800 transition-colors">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About Corporate</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Our Services</a></li>
+                        <li><a href="#why-us" class="hover:text-gold-400 transition-colors">Competitive Edge</a></li>
+                        <li><a href="#team" class="hover:text-gold-400 transition-colors">Leadership</a></li>
+                        <li><a href="#testimonials" class="hover:text-gold-400 transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Solutions</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Freight Logistics</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Technical Consulting</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Global Trade</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Renewable Infrastructure</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Equipment Sourcing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Insights Bulletin</h4>
+                    <p class="text-xs text-slate-400 mb-3">Subscribe for global commodity & logistics market intelligence.</p>
+                    <div class="space-y-2">
+                        <input type="email" placeholder="enter email address" class="w-full bg-navy-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-500">
+                        <button onclick="alert('Thank you for subscribing to Vinocent Insights!')" class="w-full gold-gradient-bg text-navy-950 font-bold py-2 rounded-lg text-xs">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Vinocent Global Resources Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Governance</a>
+                    <a href="#github-deploy" class="text-gold-500 hover:text-gold-400">GitHub Pages Ready</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get Started Consultation Modal -->
+    <div id="consultationModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy-950/80 backdrop-blur-md">
+        <div class="glass-card bg-navy-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="toggleModal('consultationModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <h3 class="text-2xl font-bold text-white mb-2">Request Strategy Consultation</h3>
+            <p class="text-xs text-slate-400 mb-6">Schedule a session with our global solutions architecture team.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Consultation request queued. Our team will contact you within 4 hours.'); toggleModal('consultationModal');" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Full Name</label>
+                    <input type="text" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-gold-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Company / Organization</label>
+                    <input type="text" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-gold-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Direct Phone</label>
+                    <input type="tel" required class="w-full bg-navy-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-gold-500 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full gold-gradient-bg text-navy-950 font-bold py-3 rounded-xl text-sm shadow-lg mt-2">
+                    Confirm Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Service Detail Drawer Modal -->
+    <div id="serviceDetailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy-950/80 backdrop-blur-md">
+        <div class="glass-card bg-navy-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="toggleModal('serviceDetailModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <div id="serviceModalTitle" class="text-2xl font-bold text-white mb-3">Service Details</div>
+            <div id="serviceModalBody" class="text-slate-300 text-sm leading-relaxed space-y-4">
+                <!-- Content injected dynamically via JS -->
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
+                <button onclick="toggleModal('serviceDetailModal'); toggleModal('consultationModal');" class="gold-gradient-bg text-navy-950 font-bold px-6 py-2.5 rounded-lg text-xs uppercase tracking-wider">
+                    Inquire About This Service
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // About Section Tabs Dynamic Content
+        const tabData = {
+            mission: `
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Our mission is to empower global commercial ventures by delivering robust supply chain logistics, cutting-edge technical expertise, and ethically managed resource commodities that build enduring value.
+                </p>
+            `,
+            vision: `
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    To be the foremost trusted partner for intercontinental industrial trade, pioneering sustainable resource distribution and driving technical transformation across emerging and established markets.
+                </p>
+            `,
+            values: `
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Uncompromising Integrity & Regulatory Rigor</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Continuous Technological Innovation</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Sustainable Resource Stewardship</li>
+                </ul>
+            `
+        };
+
+        function switchTab(tabKey) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-gold-500', 'text-gold-400');
+                btn.classList.add('border-transparent', 'text-slate-400');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabKey}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-slate-400');
+                activeBtn.classList.add('border-gold-500', 'text-gold-400');
+            }
+
+            document.getElementById('tab-content').innerHTML = tabData[tabKey];
+        }
+
+        // Initialize default tab on load
+        window.onload = function() {
+            switchTab('mission');
+        };
+
+        // Modal Toggler
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.toggle('hidden');
+            }
+        }
+
+        // Mobile Menu Toggler
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Service Detail Modal Handler
+        const serviceDetails = {
+            'supply-chain': {
+                title: 'Supply Chain & Freight Management',
+                desc: 'Vinocent provides comprehensive air, ocean, and terrestrial freight management. Our proprietary logistics dispatch technology optimizes cargo transit times and minimizes customs delays across complex trade zones.'
+            },
+            'tech-consulting': {
+                title: 'Technical & Industrial Consulting',
+                desc: 'Our senior engineers and industrial consultants advise enterprise clients on plant modernizations, automated process integration, asset lifespan maximization, and international compliance audits.'
+            },
+            'trade-solutions': {
+                title: 'Global Commodities & Trade Solutions',
+                desc: 'We facilitate large-scale international sourcing and distribution of critical raw materials, energy products, and heavy manufactured goods with guaranteed delivery SLAs.'
+            },
+            'energy': {
+                title: 'Renewable Energy Infrastructure',
+                desc: ' turnkey clean energy infrastructure development including industrial solar farms, off-grid battery energy storage solutions (BESS), and hybrid microgrid engineering.'
+            },
+            'machinery': {
+                title: 'Heavy Machinery & Procurement',
+                desc: 'Direct original-equipment-manufacturer (OEM) sourcing of heavy machinery for civil infrastructure, mining operations, and specialized manufacturing plants.'
+            },
+            'public-sector': {
+                title: 'Government & Public Sector Contracting',
+                desc: 'Specialized public infrastructure fulfillment, emergency response supply lines, and government-standard compliant procurement workflows.'
+            }
+        };
+
+        function openServiceModal(key) {
+            const data = serviceDetails[key];
+            if (data) {
+                document.getElementById('serviceModalTitle').innerText = data.title;
+                document.getElementById('serviceModalBody').innerHTML = `<p>${data.desc}</p>`;
+                toggleModal('serviceDetailModal');
+            }
+        }
+
+        // Contact Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+
+        function resetContactForm() {
+            document.getElementById('contactForm').reset();
+            document.getElementById('contactForm').classList.remove('hidden');
+            document.getElementById('formSuccess').classList.add('hidden');
+        }
+
+        // Terminal Command Copy Utility
+        function copyTerminalCommands() {
+            const commands = `git init
+git add index.html
+git commit -m "Initial commit: Vinocent Global Resources website"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/vinocent-global-resources.git
+git push -u origin main`;
+
+            // Fallback copy execution
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = commands;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            const label = document.getElementById('copyTerminalBtnText');
+            label.innerText = 'Copied to Clipboard!';
+            setTimeout(() => {
+                label.innerText = 'Copy Terminal Script';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
